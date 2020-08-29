@@ -1,0 +1,167 @@
+body{
+    background-color: #FAF6EA;
+}
+
+.navbar {
+    z-index: 2;
+}
+
+.section1{
+	background-color: white;
+	min-height: 500px;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+    z-index: 2;
+}
+.section2{
+	background-color: white;
+	min-height: 500px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+    z-index: 2;
+}
+
+/* DELETE IS HERE */
+	.delete {
+		padding: 0px;
+		margin-top: 2px;
+		margin-bottom: 0;
+		color: black;
+		font-weight: bolder;
+		cursor: pointer;
+	}
+
+#phone-preview{
+	height: 450px;
+	transform: translateY(5.5%);
+	border-radius: 30px;
+	border: 20px solid lightgray;
+	overflow-y: scroll;
+	background-image: linear-gradient(#F8EF20, #FF30AC);
+}
+
+#create-title h1{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -0.015em;
+    color: black;
+}
+
+#create-title h5, #create-title a{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: -0.015em;
+    color: black;
+	text-decoration: underline;
+}
+
+#create-title button{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: -0.015em;
+	text-decoration: none;
+}
+
+#toggle-screen button{
+    padding: 0% 0% 0% 0%;
+    color: black;
+}
+
+#create-title input{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: -0.015em;
+	text-decoration: none;
+}
+
+.btn-light{
+	filter: invert(10%);
+}
+.linksNavButton, .designNavButton{
+	font-size: 1.3em;
+}
+/*-----Color Theme Button Styling-----*/
+.theme-btn{
+	height: 50px;
+	border: none;
+}
+#lightblue-blue-theme{
+	background-image: linear-gradient(#4BFFD4, #3787FF);
+}
+#yellow-pink-theme{
+	background-image: linear-gradient(#F8EF20, #FF30AC);
+}
+#pink-purple-theme{
+	background-image: linear-gradient(#FF96CE, #933FFF);
+}
+#yellow-green-theme{
+	background-image: linear-gradient(#F8EF20, #5FFE78);
+}
+
+/*phone preview content*/
+.post_card p, .post_card p:hover, .post_card p:active, .post_card p:visited{
+	background-color: white;
+	color: black;
+	text-decoration: none;
+	border-radius: 7.5px;
+	height: 35px;
+	font-size: 1.2em
+	max-width: 250px;
+	display: flex;
+	justify-content: center;
+  	align-items: center;
+}
+#username-preview{
+	color: black;
+}
+
+/*background circles*/
+#pink {
+    background-color: #efa79d;
+    border-radius: 50%;
+    width: 50%;
+    padding-top: 50%;
+    z-index: 1;
+    position: fixed;
+    top: -30%;
+    left: -17%;
+}
+#blue {
+    background-color: #456a8e;
+    border-radius: 50%;
+    width: 40%;
+    padding-top: 40%;
+    z-index: 1;
+    position: fixed;
+    top: -45%;
+    left: 45%;
+}
+#beige {
+    background-color: #ffd1ad;
+    border-radius: 50%;
+    width: 40%;
+    padding-top: 40%;
+    z-index: 1;
+    position: fixed;
+    top: 65%;
+    left: 18%;
+}
+#green {
+    background-color: #b2b4a2;
+    border-radius: 50%;
+    width: 40%;
+    padding-top: 40%;
+    z-index: 1;
+    position: fixed;
+    top: 38%;
+    left: 70%;
+}

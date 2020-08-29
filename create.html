@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Create | edLink</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+        <link rel="icon" href="images/edlink-link.png" type="image/png">
+        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+        <link href="create.css" rel="stylesheet" type="text/css">
+
+    </head>
+
+    <body id="body">
+
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: white; color: white">
+          	<a class="navbar-brand" href="landingpg.html">
+    			<img src="images/logo.png" height="45" class="d-inline-block align-top" loading="lazy">
+  			</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+          	<div class="collapse navbar-collapse text-center" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <a class="nav-item nav-link" href="login.html">Login</a>
+                <button type="button" class="btn btn-light" id="nav-button" style="background-color: #FF6857; border: none; color: white" onclick="window.location.href='signup.html';">Register</button>
+	            </ul>
+          	</div>
+        </nav>
+
+
+        <br><br>
+        <div class="d-flex justify-content-center">
+
+            <div class="section1 col-10 col-lg-6">
+                <div id="create-title" align="center">
+                    <br>
+                    <h1>Your edLink</h1>
+                    <a href="" id="pageLink" id="url-link-md"><h5>https://edlink.parthean.com/{username}</h5></a>
+                    <a href="" id="url-link-xs"><h3>{username}</h3></a>
+
+                    <div align="center" id="toggle-screen">
+                        <button type="button" class="btn btn-light col-11 col-md-4 mx-1 mt-1 linksNavButton" onclick="document.getElementById('linksPart').style.display='block';document.getElementById('designPart').style.display='none';">Links</button>
+                        <button type="button" class="btn btn-light col-11 col-md-4 mx-1 mt-1 designNavButton" onclick="document.getElementById('linksPart').style.display='none';document.getElementById('designPart').style.display='block';">Design</button>
+                    </div>
+                    <br>
+
+                    <div id="linksPart">
+                        <div class="form-inline d-flex justify-content-center">
+                            <div class="input-group col-12 col-md-5 mt-1">
+                                <input type="text" class="form-control" id="titleInput" placeholder="Title">
+                            </div>
+                            <div class="input-group col-12 col-md-5 mt-1">
+                                <input type="text" class="form-control" id="linkInput" placeholder="Link">
+                            </div>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-outline-primary btn-block col-11 col-md-10 add-to-page-btn">Add to Page</button>
+                    </div>
+
+                    <div id="designPart" class="mr-5 ml-3" style="display: none"  align="left">
+                        <h5>Profile Picture</h5>
+                        <img id="profileImage"  src="images/filler-pfp.png" width="auto" height="130">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+											<input type="file" id="imgFile" hidden="hidden" />
+                          <button type="button" id="chooseImage" class="btn btn-outline-primary">Choose Image</button>
+                          <button type="button" id="removeImage" class="btn btn-outline-primary">Remove Image</button>
+                        </div>
+
+                        <h5 class="mb-2 ml-3">Color Theme</h5>
+                        <div align="center">
+                            <button type="button" class="btn col-sm-5 col-md-2 mx-1 mt-1 theme-btn gradient-change" id="yellow-pink-theme"></button>
+                            <button type="button" class="btn col-sm-5 col-md-2 mx-1 mt-1 theme-btn gradient-change" id="lightblue-blue-theme"></button>
+                            <button type="button" class="btn col-sm-5 col-md-2 mx-1 mt-1 theme-btn gradient-change" id="pink-purple-theme"></button>
+                            <button type="button" class="btn col-sm-5 col-md-2 mx-1 mt-1 theme-btn gradient-change" id="yellow-green-theme"></button>
+                            <br>
+                            <h6 align="left" class="ml-3 mt-4">Custom Theme</h6>
+                            <div class="form-inline mb-3">
+
+                                <div class="input-group col-md-4 mb-1">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text">#</span>
+                                  </div>
+                                  <input type="text" class="form-control" placeholder="Hex Code 1" id="custom-input-1">
+                                </div>
+
+                                <div class="input-group col-md-4 mb-1">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text">#</span>
+                                  </div>
+                                  <input type="text" class="form-control" placeholder="Hex Code 2" id="custom-input-2">
+                                </div>
+
+                                <button type="button" class="btn btn-outline-primary form-control col-md-3 mb-1" id="custom-gradient-btn">Use Gradient</button>
+			    </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="section2 col-lg-4">
+                <div class="form-inline d-flex justify-content-center">
+                    <div class="col-lg-10 col-xl-9" id="phone-preview" align="center">
+                        <img id="previewImage" src="images/filler-pfp.png" width="auto" height="130" border-radius:"50%">
+                        <!-- <p id="username-preview">{username}</p> -->
+                    </div>
+            </div>
+        </div>
+                </div>
+
+      <div class="rounded-circle" id="pink"></div>
+      <div class="rounded-circle" id="blue"></div>
+      <div class="rounded-circle" id="beige"></div>
+      <div class="rounded-circle" id="green"></div>
+
+
+
+
+
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+		<!-- firebase -->
+				<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+				<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+				<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+				<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+				<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-storage.js"></script>
+        <!-- Other JS -->
+        <script src="create-2.js"></script>
+    </body>
+</html>

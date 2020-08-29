@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Profile</title>
+        <link href="https://fonts.googleapis.com/css?family=Heebo&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/6ef85b7252.js"></script>
+        <!--
+          commented out CSS since it was giving me an error - uncomment
+          <link href="styles.css" rel="stylesheet" type="text/css">-->
+        
+        <!--firebase authentication-->
+        <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+          <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+
+    </head>
+    <body>
+      <div id="login">
+          <!-- <input type="button" class="button" value="sign up"> -->
+
+                <form id="signupuser">
+                   <span style="color:black">email:</span> <input type="text" id="newEmailInput"><br>
+                    <span style="color:black">password:</span> <input type="text" id="newPassInput"><br>
+                    <input type="submit" value="sign up">
+                </form>
+
+                <form id="loginuser">
+                   <span style="color:black">email:</span> <input type="text" id="email_input"><br>
+                    <span style="color:black">password:</span> <input type="text" id="pass_input"><br>
+                    <input type="submit" value="login">
+                </form>
+      </div>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+
+            <script src="signup.js"></script>
+    </body>
+</html>

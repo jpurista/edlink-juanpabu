@@ -1,0 +1,45 @@
+body{
+	background-color: lightgrey;
+}
+.box1{
+	background: linear-gradient(yellow,hotpink);
+	background-repeat:repeat-x;
+	background-attachment: fixed;
+	margin-top:2.5%;
+	padding:0%;
+	border-radius: 15px;
+	height:650px;
+	width:95%;
+	margin-right:2.5%;
+	margin-left:2.5%;
+	text-align: center;
+	padding-top: 5%;
+}
+.box2{
+	background-color: white;
+	border-radius: 10px;
+	width:35%;
+	margin-left: 32.5%;
+}
+.box3{
+	background-color: white;
+	border-radius: 10px;
+	width:35%;
+	margin-left: 32.5%;
+}
+/*site content*/
+.post_card p, .post_card p:hover, .post_card p:active, .post_card p:visited{
+	background-color: white;
+	color: black;
+	text-decoration: none;
+	border-radius: 7.5px;
+	height: 35px;
+	font-size: 1.2em
+	max-width: 250px;
+	display: flex;
+	justify-content: center;
+  	align-items: center;
+}
+#username-preview{
+	color: black;
+}
