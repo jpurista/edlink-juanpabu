@@ -25,6 +25,8 @@ $(document).ready(function(){
     }
 });
 
+
+
 var firebaseConfig = {
     apiKey: "AIzaSyDQqS1OuU1s8cwkyQDcgqQV9vquxFZAfTU",
     authDomain: "partheanedlink.firebaseapp.com",
@@ -389,7 +391,9 @@ firebase.auth().onAuthStateChanged(function(user) {
   });
 }
 
+
 // calling the function above when the page comes back
 $(document).ready(function(){
     loadPage()
 });
+

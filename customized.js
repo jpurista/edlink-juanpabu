@@ -33,7 +33,7 @@ function addNewCard(doc){
 
 
 function loadPage(){
-  var userId = "tNelH5tZvedOWMJM16Jd8GLQj493";
+  var userId = this.href.substring(this.href.lastIndexOf('/') + 1);
   db.collection("users").doc(userId).collection("page").get().then(function(querySnapshot) {
     querySnapshot.forEach(function(doc) {
         addNewCard(doc);
